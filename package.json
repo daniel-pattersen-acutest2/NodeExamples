@@ -1,0 +1,20 @@
+{
+  "name": "node-example",
+  "version": "1.0.0",
+  "description": "Example node code",
+  "main": "main.js",
+  "dependencies": {
+    "node-fetch": "^2.6.0"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/daniel-pattersen-acutest2/NodeExamples.git"
+  },
+  "author": "Daniel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/daniel-pattersen-acutest2/NodeExamples/issues"
+  },
+  "homepage": "https://github.com/daniel-pattersen-acutest2/NodeExamples#readme"
+}
