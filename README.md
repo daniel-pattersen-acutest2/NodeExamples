@@ -4,16 +4,16 @@
 ### Commands:
 
 For help:
->.\main.js -h
+>node .\main.js -h
 
 Async/Await example:
->.\main.js -asyncAwait
+>node .\main.js -asyncAwait
 
 Callback example:
->.\main.js -callback
+>node .\main.js -callback
 
 Apicall example:
->.\main.js -apiExample {-async OR -promise}
+>node .\main.js -apiExample {-async OR -promise}
 
 Calculator:
->.\main.js -calculator
+>node .\main.js -calculator
