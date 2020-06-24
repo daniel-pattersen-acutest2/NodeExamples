@@ -1,10 +1,10 @@
 "use-strict"
 const { argv } = require("process");
 "use-strict";
-const AsyncAwait = require("./asyncAwait.js");
-const ApiExample = require("./apiCallExample.js");
-const CallbackExample = require("./callback.js");
-const CalculatorExample = require("./Calculator");
+const AsyncAwait = require("./Classes/asyncAwait.js");
+const ApiExample = require("./Classes/apiCallExample.js");
+const CallbackExample = require("./Classes/callback.js");
+const CalculatorExample = require("./Classes/Calculator");
 
 const argumentList = {
     "-asyncAwait": {
