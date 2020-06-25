@@ -1,12 +1,14 @@
+
 module.exports = class ApiCallExample {
-    private fetch = require('node-fetch').default;
-    private url:string = "http://dummy.restapiexample.com/api/v1/employees";
-    private header:object = {
+    private fetch = require('node-fetch');
+    private url: string = "http://dummy.restapiexample.com/api/v1/employees";
+    private header: object = {
         headers: {
             'Content-Type': 'application/json'
         }
     }
-    constructor(input:string) { 
+    constructor(input: string) {
+        
         if (input === "-promise") {
             console.log("Fetching data from api with promise pattern\n")
             this.performAPICallWithPromise(this.url);
@@ -17,21 +19,25 @@ module.exports = class ApiCallExample {
         }
     }
 
-    performAPICallWithPromise(url:string) {
+    performAPICallWithPromise(url: string) {
         this.fetch(url, this.header)
-        .then((response) => {
-            console.log("Status code:", response.status);
-            response.json()
-            .then((data) => {
-                console.log(data);
-            })
-        });
+            .then((response) => {
+                console.log("Status code:", response.status);
+                if (response.status === 200) {
+                    response.json()
+                        .then((data) => {
+                            console.log(data);
+                        })
+                }
+            });
     }
 
-    async performAPICallWithAsyncAwait(url:string) {
-        let response = await fetch(url, this.header);
+    async performAPICallWithAsyncAwait(url: string) {
+        let response = await this.fetch(url, this.header);
         console.log("Status code:", response.status);
-        let jsonData = await response.json();
-        console.log(jsonData);
+        if (response.status === 200) {
+            let jsonData = await response.json();
+            console.log(jsonData);
+        }
     }
 }
