@@ -21,3 +21,8 @@ Apicall promise example:
 
 Calculator:
 >npm run-script calculator
+
+### Typescript extras
+[TypeScript in 5 minutes](https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html)
+[Migrating from JavaScript](https://www.typescriptlang.org/docs/handbook/migrating-from-javascript.html)
+[TypeScript Cheatsheet](https://devhints.io/typescript)
