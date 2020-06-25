@@ -1,19 +1,23 @@
-### To run:
+### To setup:
 > npm install
+> npx tsc
 
 ### Commands:
 
 For help:
->node .\main.js -h
+>npm run-script help
 
 Async/Await example:
->node .\main.js -asyncAwait
+>npm run-script asyncAwait
 
 Callback example:
->node .\main.js -callback
+>npm run-script callback
 
-Apicall example:
->node .\main.js -apiExample {-async OR -promise}
+Apicall async example:
+>npm run-script apiAsync
+
+Apicall promise example:
+>npm run-script apiPromise
 
 Calculator:
->node .\main.js -calculator
+>npm run-script calculator

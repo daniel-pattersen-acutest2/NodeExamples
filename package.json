@@ -6,7 +6,7 @@
   "scripts": {
     "tsc": "tsc",
     "help": "node ./build/main.js -h",
-    "asyncawait": "node ./build/main.js -asyncAwait",
+    "asyncAwait": "node ./build/main.js -asyncAwait",
     "callback": "node ./build/main.js -callback",
     "apiAsync": "node ./build/main.js -apiExample -async",
     "apiPromise": "node ./build/main.js -apiExample -promise",
