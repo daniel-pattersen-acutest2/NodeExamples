@@ -1,9 +1,8 @@
-"use-strict"
 module.exports = class CallbackExample {
     constructor() {
-        const newMessage = "Hello";
+        const newMessage:string = "Hello";
 
-        function print(message, callback) {
+        function print(message:string, callback:(outMessage:string)=>void) {
             console.log(message);
             callback("Message has been printed");
         }
@@ -11,7 +10,7 @@ module.exports = class CallbackExample {
         // Callback using regular function call
         console.log("Regular function call");
 
-        const callbackFunction = function (outMessage) {
+        const callbackFunction = function (outMessage:string):void {
             console.log(outMessage);
         }
 

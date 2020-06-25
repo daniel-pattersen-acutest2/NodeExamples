@@ -4,7 +4,9 @@
   "description": "Example node code",
   "main": "main.js",
   "dependencies": {
-    "node-fetch": "^2.6.0"
+    "@types/node": "^14.0.14",
+    "node-fetch": "^2.6.0",
+    "typescript": "^3.9.5"
   },
   "devDependencies": {},
   "repository": {

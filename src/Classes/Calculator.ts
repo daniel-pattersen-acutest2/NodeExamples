@@ -1,10 +1,10 @@
 module.exports = class Calculator {
     operations = {
-        ADD: (input1, input2) => {
+        ADD: (input1:number, input2:number):number => {
             console.log("Adding:", input1, input2)
             return input1 + input2;
         },
-        MULTIPLY: (input1, input2) => {
+        MULTIPLY: (input1:number, input2:number):number => {
             console.log("Multiplying:", input1, input2)
             return input1 * input2;
         }
@@ -13,7 +13,7 @@ module.exports = class Calculator {
         // Calculator Example
         console.log("\nCalculator Example:")
         
-        function calculate(input1, input2, operation) {
+        function calculate(input1:number, input2:number, operation:(input1:number, input2:number)=>number) {
             console.log("Calulator output:", operation(input1, input2));
         }
 

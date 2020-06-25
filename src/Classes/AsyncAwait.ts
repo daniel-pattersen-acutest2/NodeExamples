@@ -1,10 +1,6 @@
-"use-strict";
-// Async await vs Promises
-
 module.exports = class AsyncAwait {
     constructor() {
         // Regular slow function
-
         function slowFunction() {
             setTimeout(() => {
                 console.log("Slow function finished")
@@ -15,7 +11,7 @@ module.exports = class AsyncAwait {
         console.log(slowFunction());
 
         // Using promises
-        function slowPromiseFunction() {
+        function slowPromiseFunction():Promise<string> {
             console.log("Slow promise function running");
             return new Promise((resolve) => {
                 setTimeout(() => {
@@ -29,9 +25,7 @@ module.exports = class AsyncAwait {
         })
 
         // Using Async/Await
-
-
-        async function slowAsyncFunction() {
+        async function slowAsyncFunction():Promise<string> {
             console.log("Slow async function running")
             return await new Promise((resolve) => {
                 setTimeout(() => {

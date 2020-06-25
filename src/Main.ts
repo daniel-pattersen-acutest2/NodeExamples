@@ -1,6 +1,4 @@
-"use-strict"
 const { argv } = require("process");
-"use-strict";
 const AsyncAwait = require("./Classes/asyncAwait.js");
 const ApiExample = require("./Classes/apiCallExample.js");
 const CallbackExample = require("./Classes/callback.js");
@@ -12,8 +10,8 @@ const argumentList = {
         "description": "Runs the async await examples"
     },
     "-apiExample": {
-        "call": (input) => { new ApiExample(input) },
-        "description": "Runs the api examples using promise pattern, args={-promise OR -async}"
+        "call": (input:string) => { new ApiExample(input) },
+        "description": "args={-promise OR -async} - Runs the api examples using promise pattern"
     },
     "-callback": {
         "call": () => { new CallbackExample() },
@@ -32,6 +30,6 @@ if (argv.length === 2) {
     argumentList[argv[2]].call(argv[3])
 } else {
     for (let key of Object.keys(argumentList)) {
-        console.log(key, ",", argumentList[key].description)
+        console.log(key, "-", argumentList[key].description)
     }
 }

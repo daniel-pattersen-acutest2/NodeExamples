@@ -1,26 +1,24 @@
-"use-strict"
-const fetch = require('node-fetch').default;
-const url = "http://dummy.restapiexample.com/api/v1/employees";
-
 module.exports = class ApiCallExample {
-    header = {
+    private fetch = require('node-fetch').default;
+    private url:string = "http://dummy.restapiexample.com/api/v1/employees";
+    private header:object = {
         headers: {
             'Content-Type': 'application/json'
         }
     }
-    constructor(input) { 
+    constructor(input:string) { 
         if (input === "-promise") {
             console.log("Fetching data from api with promise pattern\n")
-            this.performAPICallWithPromise(url);
+            this.performAPICallWithPromise(this.url);
 
         } else if (input === "-async") {
             console.log("Fetching data from api with async/await pattern\n");
-            this.performAPICallWithAsyncAwait(url);
+            this.performAPICallWithAsyncAwait(this.url);
         }
     }
 
-    performAPICallWithPromise(url) {
-        fetch(url, this.header)
+    performAPICallWithPromise(url:string) {
+        this.fetch(url, this.header)
         .then((response) => {
             console.log("Status code:", response.status);
             response.json()
@@ -30,7 +28,7 @@ module.exports = class ApiCallExample {
         });
     }
 
-    async performAPICallWithAsyncAwait(url) {
+    async performAPICallWithAsyncAwait(url:string) {
         let response = await fetch(url, this.header);
         console.log("Status code:", response.status);
         let jsonData = await response.json();
