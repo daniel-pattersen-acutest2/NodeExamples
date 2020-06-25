@@ -1,5 +1,6 @@
 ### To setup:
 > npm install
+
 > npx tsc
 
 ### Commands:
@@ -24,5 +25,7 @@ Calculator:
 
 ### Typescript extras
 [TypeScript in 5 minutes](https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html)
+<br>
 [Migrating from JavaScript](https://www.typescriptlang.org/docs/handbook/migrating-from-javascript.html)
+<br>
 [TypeScript Cheatsheet](https://devhints.io/typescript)
